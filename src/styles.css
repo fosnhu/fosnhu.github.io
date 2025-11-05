@@ -1,0 +1,188 @@
+:root {
+  --bg: #0a0a0b;
+  --text: #e6e6e6;
+  --muted: #b7c0ca;
+  --edge: #0e0e10;
+  --primary: #005BAC; /* SNHU Blue */
+  --primary-dark: #003057; /* SNHU Dark Blue */
+  --accent: #FFB81C; /* SNHU Gold */
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Top bar */
+.topbar {
+  position: relative;
+  background: var(--edge);
+  border-bottom: 4px solid var(--edge);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.brand h1 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--text);
+}
+
+/* Nav */
+.navbar {
+  background: var(--edge);
+  border-top: 2px solid var(--accent);
+}
+
+.nav-inner {
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.nav-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--primary);
+  color: var(--text);
+  text-decoration: none;
+  border: 2px solid var(--edge);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+}
+
+.nav-btn:focus-visible,
+.nav-btn:hover {
+  outline: none;
+  background: var(--primary-dark);
+}
+
+/* Content */
+main {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+.content-block {
+  margin-bottom: 48px;
+}
+
+.content-block h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.content-block h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.content-block p {
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+.link-list li {
+  margin-bottom: 8px;
+}
+
+.link-list a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Tiles Grid */
+.tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.tile {
+  background: var(--edge);
+  border: 2px solid var(--primary);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+}
+
+.tile-title {
+  margin: 0;
+  padding: 20px;
+  background: var(--primary);
+  color: var(--text);
+  font-size: 20px;
+  border-bottom: 2px solid var(--accent);
+}
+
+.tile-content {
+  padding: 24px;
+  flex-grow: 1;
+}
+
+.tile-content p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tile-content p:last-child {
+  margin-bottom: 0;
+}
+
+.discord-widget {
+  width: 100%;
+  min-height: 400px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.tile-note {
+  font-size: 14px;
+  font-style: italic;
+  color: var(--accent);
+  margin-top: 12px;
+}
+
